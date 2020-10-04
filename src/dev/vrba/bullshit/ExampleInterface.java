@@ -21,4 +21,12 @@ public interface ExampleInterface {
      * else return arg0 * __self__(arg0 - 1);
      */
     int aWYgKGFyZzAgPD0gMCkgcmV0dXJuIDE7IAplbHNlIHJldHVybiBhcmcwICogX19zZWxmX18oYXJnMCAtIDEpOw__(int arg0);
+
+    /**
+     * Fibonacci
+     *
+     * if (arg0 <= 1) return arg0;
+     * return __self__(arg0 - 1) + __self__(arg0 - 2);
+     */
+    int aWYgKGFyZzAgPD0gMSkgcmV0dXJuIGFyZzA7IApyZXR1cm4gX19zZWxmX18oYXJnMCAtIDEpICsgX19zZWxmX18oYXJnMCAtIDIpOw__(int arg0);
 }

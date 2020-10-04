@@ -16,5 +16,9 @@ public class Base64Implement {
         int factorialOfFive = implementation.aWYgKGFyZzAgPD0gMCkgcmV0dXJuIDE7IAplbHNlIHJldHVybiBhcmcwICogX19zZWxmX18oYXJnMCAtIDEpOw__(5);
 
         System.out.println("5! = " + factorialOfFive);
+
+        int fifthFibonacciNumber = implementation.aWYgKGFyZzAgPD0gMSkgcmV0dXJuIGFyZzA7IApyZXR1cm4gX19zZWxmX18oYXJnMCAtIDEpICsgX19zZWxmX18oYXJnMCAtIDIpOw__(5);
+
+        System.out.println("fib(5) = " + fifthFibonacciNumber);
     }
 }
