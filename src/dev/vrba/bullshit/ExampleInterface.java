@@ -1,5 +1,8 @@
 package dev.vrba.bullshit;
 
+/**
+ * As = is not a valid Java identifier, use _ instead for padding
+ */
 public interface ExampleInterface {
     /**
      * System.out.println("Hello base64");
@@ -7,7 +10,7 @@ public interface ExampleInterface {
     void U3lzdGVtLm91dC5wcmludGxuKCJIZWxsbyBiYXNlNjQiKTs_();
 
     /**
-     * return a + b;
+     * return arg0 + arg1;
      */
-    int cmV0dXJuIGEgKyBiOw__(int a, int b);
+    int cmV0dXJuIGFyZzAgKyBhcmcxOw__(int arg0, int arg1);
 }

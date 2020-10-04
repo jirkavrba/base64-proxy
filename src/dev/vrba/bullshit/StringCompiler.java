@@ -1,4 +1,48 @@
 package dev.vrba.bullshit;
 
-public class StringCompiler {
+import org.joor.Reflect;
+
+import java.lang.reflect.Parameter;
+import java.util.Arrays;
+
+public class StringCompiler<T, R> {
+    final Class<T> targetClass;
+    final String returnType;
+    final String sourceCode;
+    final Parameter[] parameters;
+
+    protected StringCompiler(final Class<T> targetClass, final Class<R> returnType, final Parameter[] parameters, final String sourceCode) {
+        this.targetClass = targetClass;
+        this.parameters = parameters;
+        this.sourceCode = sourceCode;
+        this.returnType = returnType.getName();
+    }
+
+    private String buildSourceCode() {
+        final String parameters = String.join(
+                ", ",
+                Arrays.stream(this.parameters)
+                        .map(parameter -> parameter.getType().getName() + " " + parameter.getName())
+                        .toArray(String[]::new)
+        );
+
+        return  "package " + this.targetClass.getPackage().getName() + ";\n\n" +
+                "public class " + this.targetClass.getSimpleName() + "_base64 {\n" +
+                    "\tpublic static " + this.returnType + " magic(" + parameters + ") {\n" +
+                        "\t\t" + this.sourceCode + "\n" +
+                    "\t}\n" +
+                "}\n";
+    }
+
+    public R evaluate(Object ...arguments) throws Throwable {
+//        System.out.println("Compiling " + this.targetClass.getName() + "_base64.class from generated source: \n" + this.buildSourceCode());
+
+        Reflect reflection = Reflect.compile(this.targetClass.getName() + "_base64", this.buildSourceCode()).create();
+
+        if (arguments.length == 0) {
+            return reflection.call("magic").get();
+        }
+
+        return reflection.call("magic", arguments).get();
+    }
 }
