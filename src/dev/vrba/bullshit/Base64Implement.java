@@ -12,5 +12,9 @@ public class Base64Implement {
         int three = implementation.cmV0dXJuIGFyZzAgKyBhcmcxOw__(1, 2);
 
         System.out.println("1 + 2 = " + three);
+
+        int factorialOfFive = implementation.aWYgKGFyZzAgPD0gMCkgcmV0dXJuIDE7IAplbHNlIHJldHVybiBhcmcwICogX19zZWxmX18oYXJnMCAtIDEpOw__(5);
+
+        System.out.println("5! = " + factorialOfFive);
     }
 }

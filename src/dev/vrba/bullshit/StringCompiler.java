@@ -26,10 +26,12 @@ public class StringCompiler<T, R> {
                         .toArray(String[]::new)
         );
 
+        final String sourceCode = this.sourceCode.replaceAll("__self__", "magic");
+
         return  "package " + this.targetClass.getPackage().getName() + ";\n\n" +
                 "public class " + this.targetClass.getSimpleName() + "_base64 {\n" +
                     "\tpublic static " + this.returnType + " magic(" + parameters + ") {\n" +
-                        "\t\t" + this.sourceCode + "\n" +
+                        "\t\t" + sourceCode + "\n" +
                     "\t}\n" +
                 "}\n";
     }

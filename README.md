@@ -43,4 +43,6 @@ class Program {
 }
 ```
 
+For recursive methods use `__self__` to reference the generated method.
+
 That's it, so much wasted time on this :poop:
