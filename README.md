@@ -1,5 +1,4 @@
 ![forthebadge](https://forthebadge.com/images/badges/contains-tasty-spaghetti-code.svg)
-![forthebadge](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)
 ![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)
 ![forthebadge](https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg)
 ![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)
