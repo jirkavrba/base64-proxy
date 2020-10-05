@@ -1,6 +1,8 @@
-package dev.vrba.bullshit;
+package dev.vrba.bullshit.example;
 
-public class Base64Implement {
+import dev.vrba.bullshit.Base64ImplementationCreator;
+
+public class ExampleProgram {
 
     public static void main(String[] args) {
         ExampleInterface implementation = Base64ImplementationCreator.makeImplementation(ExampleInterface.class);

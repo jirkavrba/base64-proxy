@@ -1,4 +1,4 @@
-package dev.vrba.bullshit;
+package dev.vrba.bullshit.example;
 
 /**
  * As = is not a valid Java identifier, use _ instead for padding

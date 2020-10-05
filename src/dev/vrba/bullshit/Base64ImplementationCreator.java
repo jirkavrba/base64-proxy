@@ -4,10 +4,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Parameter;
 import java.lang.reflect.Proxy;
-import java.util.Arrays;
 import java.util.Base64;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Base64ImplementationCreator {
 
@@ -20,6 +17,7 @@ public class Base64ImplementationCreator {
         }
 
         @Override
+        @SuppressWarnings("unchecked")
         public Object invoke(Object o, Method method, Object[] arguments) throws Throwable {
             String base64 = method.getName().replaceAll("_", "=");
             String body = new String(Base64.getDecoder().decode(base64));
@@ -30,18 +28,17 @@ public class Base64ImplementationCreator {
                 arguments = new Object[0];
             }
 
-            //noinspection unchecked
             return new StringCompiler(
                     targetClass,
                     method.getReturnType(),
                     parameters,
-                    body
-            ).evaluate(arguments);
+                    body)
+                .evaluate(arguments);
         }
     }
 
+    @SuppressWarnings("unchecked")
     public static <T> T makeImplementation(final Class<T> target) {
-        //noinspection unchecked
         return (T) Proxy.newProxyInstance(
                 Base64ImplementationCreator.class.getClassLoader(),
                 new Class[] { target },
