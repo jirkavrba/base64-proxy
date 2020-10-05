@@ -1,4 +1,15 @@
+![forthebadge](https://forthebadge.com/images/badges/ages-18.svg)
+![forthebadge](https://forthebadge.com/images/badges/certified-steve-bruhle.svg)
+![forthebadge](https://forthebadge.com/images/badges/contains-tasty-spaghetti-code.svg)
+![forthebadge](https://forthebadge.com/images/badges/designed-in-ms-paint.svg)
+![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)
+![forthebadge](https://forthebadge.com/images/badges/its-not-a-lie-if-you-believe-it.svg)
+![forthebadge](https://forthebadge.com/images/badges/made-with-java.svg)
+![forthebadge](https://forthebadge.com/images/badges/powered-by-black-magic.svg)
+![forthebadge](https://forthebadge.com/images/badges/you-didnt-ask-for-this.svg)
+
 # POC: Generate method bodies from their base64 encoded names.
+![Noooooooo! You cannot define method bodies as their names, that's illegal. Haha, base64 goes brrrrr](https://imgur.com/388km9d.png)
 
 For example,
 given an interface like this:
